@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --font1:'Poppins', sans-serif;
+    --fwhite:aliceblue;
+    --fdark: rgba(4, 4, 51, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:var(--font1);
+    z-index: -1;
+    background-color: var(--fdark);
+}
+
+header {
+    background-image: url('media/5083649.jpg');
+    min-height: 90vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: aliceblue;
+}
+
+nav {
+    min-width: 100vw;
+    position: fixed;
+    z-index: 1;
+    background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li:hover {
+    border-bottom: solid black;
+
+}
+
+#content {
+    padding-left: 3%;
+}
+
+#content h1,.heading h1 {
+    font-size:100px;
+    font-weight: 800;
+    position: absolute;
+    top: 12%;
+    -webkit-text-stroke-width:2px;
+    -webkit-text-stroke-color: aliceblue;
+    -webkit-text-fill-color: transparent;
+
+}
+
+#content p {
+    justify-content: center;
+    text-align: justify;
+    margin-top: 1%;
+    font-size: 30px;
+    position: absolute;
+    bottom: 5%;
+}
+
+@media(max-width:500px) {
+    header{
+        min-height: 60vh;
+    }
+
+    #content p {
+        font-size: 100%;
+        bottom: 5%;
+    }
+
+    #content h1,.heading h1{
+        font-size:50px;
+        top: 15%;
+    }
+
+    #home,
+    #credits,#info,  .team-page-card{
+        font-size:60%;
+    }
+    #team-card h4{
+        font-size:50%;
+    }
+    .event-card {
+        font-size:45%;
+    }
+   
+}
+
+#home {
+    text-align: center;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, rgba(4, 4, 51, 1) 0%, rgba(10, 97, 165, 1) 35%,
+            rgba(53, 216, 237, 1) 100%);
+    padding: 3% 5%;
+}
+
+#about {
+    color: var(--fwhite);
+}
+
+#about>*,
+#support>*,
+#benefit>*,#latest-events>* {
+    padding-top: 3%;
+
+}
+
+#about img,#info img {
+    border-radius: 50%;
+}
+#credits {
+    color: var(--fdark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    background-image: radial-gradient(#B8DCFF, rgba(53, 216, 237, 1));
+    max-width: 100%;
+    min-height: 5vh;
+}
+
+#credits a {
+    text-decoration: none;
+    color: rgba(10, 97, 165, 1);
+}
+
+#benefit {
+    color: var(--fwhite);
+}
+
+#benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+}
+
+.benefit {
+    margin: 3%;
+    padding: 4%;
+    border: solid;
+    border-radius: 5%;
+}
+
+#team {
+    color: var(--fdark);
+    margin-top: 4%;
+}
+
+#team-card {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin:auto;
+}
+
+.team-card {
+    border-radius: 5%;
+    background-image: radial-gradient(#009ffd 10%, #2a2a72 100%);
+    margin:5%;
+    padding:5%;
+    display: flex;
+    flex-direction: column;
+    place-items:center;
+}
+
+.team-card img {
+    border-radius: 50%;
+
+}
+
+#sm-tab {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-card>* {
+    margin: 2%;
+    padding: 2%;
+}
+
+.team-card:hover {
+    background-image:linear-gradient(#2a2a72 50%,#009ffd 50%);
+
+}
+.heading{
+    min-height:45vh;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    padding:2% 5%;
+}
+.team-head{
+    background-image:url("media/team-bg.jpg");
+}
+#info{
+    background: linear-gradient(to right, #000046, #1cb5e0);
+    opacity: 0.9;
+    min-height: 50vh;
+    padding:4%;
+    color:var(--fwhite);
+    font-weight: 300;
+}
+#info>*{
+    margin-top:2%;
+}
+#top-bar-council{
+    background: linear-gradient(to right, #000046, #1cb5e0);
+    opacity:0.9;
+    font-size:2vh;
+    min-height:5vh;
+    padding:2%;
+    color:var(--fwhite);
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+#top-bar-council>*{
+    margin:1%;
+}
+.team-page-card{
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+#view{
+    outline: none;
+    border:none;
+    padding:1%;
+    cursor: pointer;
+    background-color:#c7defa;
+    color:var(--fdark);
+    border-radius:10px; 
+    font-size:1.5vh;
+    font-family: var(--font1);   
+}
+.team-collapse{
+    display:none;
+   
+}
+.events-head{
+    background-image: url("media/event-bg.jpg");
+}
+#events{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(25vw,0.5fr));
+    gap:2%;
+    padding:5%;
+    background-image: linear-gradient(to right, #6a11cb 20%, #2575fc 40%, #000046 100%);
+    opacity: 0.9;
+}
+
+.event-card{
+    margin-top:2%;
+    margin-bottom: 2%;
+    display: flex;
+    padding:1%;
+    text-align: center;
+    flex-direction:column;
+    max-height:fit-content;
+    background-color: rgba(255,255,255,0.3);
+    color:var(--fwhite);
+    justify-content: center;
+}
+.event-card>*,.h-card>*{
+    padding:3%;
+}
+.event-card img{
+    height:50%;
+}
+.lab-head{
+    background-image: url('media/lab-bg');
+}
+.latest h3{
+    margin:4%;
+    color:var(--fdark);
+}
+.latest p{
+    color:var(--fdark);
+    margin-top:2%;
+    font-weight:600;
+}
+.latest a{
+    color:var(--fwhite);
+}
+#head-cards{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,0.8fr));
+    justify-content: center;
+    height: max-content;
+}
+.h-card{
+    background-color: rgba(255,255,255,0.2);
+    padding:2%;
+    margin:4%;
+    border-radius:5%;
+}
+.h-card img{
+    border-radius:10%;
+}
+.h-card p{
+    font-style: italic;
+    font-weight:500;
+}
+.contact-head{
+    background-image: url('media/contact-bg.jpg');
+}
+#form-section{
+    background-image: linear-gradient(to bottom right,#d89c7a,#f88f3d,#c3332c,#a94a24,#550d19);
+    min-height:70vh;
+    justify-content: center;
+    text-align: center;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    width:50vw;
+}
+form>*{
+    margin:2%;
+    height:auto;
+    width:30vw;
+    outline: none;
+    padding:2%;
+    border-radius:5px;
+    border:none;
+    background-color: rgba(255,255,255,0.2);
+    font-family: var(--font1);
+    font-size:1.2vw;
+}
+textarea{
+    resize: none;
+}
+#form{
+    display: flex;
+    justify-content: space-around;
+    padding:2%;
+    margin:3%;
+    background-color: rgba(255,255,255,0.1);
+    align-items: center;
+}
