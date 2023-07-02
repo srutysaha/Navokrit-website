@@ -71,35 +71,6 @@ nav ul li:hover {
     position: absolute;
     bottom: 5%;
 }
-
-@media(max-width:500px) {
-    header{
-        min-height: 60vh;
-    }
-
-    #content p {
-        font-size: 100%;
-        bottom: 5%;
-    }
-
-    #content h1,.heading h1{
-        font-size:50px;
-        top: 15%;
-    }
-
-    #home,
-    #credits,#info,  .team-page-card{
-        font-size:60%;
-    }
-    #team-card h4{
-        font-size:50%;
-    }
-    .event-card {
-        font-size:45%;
-    }
-   
-}
-
 #home {
     text-align: center;
     overflow-x: hidden;
@@ -111,7 +82,6 @@ nav ul li:hover {
 #about {
     color: var(--fwhite);
 }
-
 #about>*,
 #support>*,
 #benefit>*,#latest-events>* {
@@ -208,7 +178,6 @@ nav ul li:hover {
 }
 #info{
     background: linear-gradient(to right, #000046, #1cb5e0);
-    opacity: 0.9;
     min-height: 50vh;
     padding:4%;
     color:var(--fwhite);
@@ -219,7 +188,6 @@ nav ul li:hover {
 }
 #top-bar-council{
     background: linear-gradient(to right, #000046, #1cb5e0);
-    opacity:0.9;
     font-size:2vh;
     min-height:5vh;
     padding:2%;
@@ -257,7 +225,7 @@ nav ul li:hover {
 }
 #events{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(25vw,0.5fr));
+    grid-template-columns:repeat(3,1fr);
     gap:2%;
     padding:5%;
     background-image: linear-gradient(to right, #6a11cb 20%, #2575fc 40%, #000046 100%);
@@ -280,7 +248,8 @@ nav ul li:hover {
     padding:3%;
 }
 .event-card img{
-    height:50%;
+    width:90%;
+    align-self: center;
 }
 .lab-head{
     background-image: url('media/lab-bg');
@@ -352,4 +321,35 @@ textarea{
     margin:3%;
     background-color: rgba(255,255,255,0.1);
     align-items: center;
+}
+@media(max-width:500px) {
+    header{
+        min-height: 60vh;
+    }
+
+    #content p {
+        font-size: 100%;
+        bottom: 5%;
+    }
+
+    #content h1,.heading h1{
+        font-size:50px;
+        top: 15%;
+    }
+
+    #home,
+    #credits,#info,  .team-page-card{
+        font-size:60%;
+    }
+    .event-card {
+        font-size:45%;
+    }
+    #team-card {
+        grid-template-columns: repeat(2,1fr);
+    }
+    #events{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+   
 }
