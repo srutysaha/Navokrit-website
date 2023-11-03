@@ -47,6 +47,13 @@ nav ul li:hover {
     border-bottom: solid black;
 
 }
+#logos{
+  display: flex;
+  justify-content: space-around;
+  place-items: center;
+    max-height: 30vh;
+    width:100%;
+}
 
 #content {
     padding-left: 3%;
@@ -76,7 +83,7 @@ nav ul li:hover {
     overflow-x: hidden;
     background: linear-gradient(to bottom, rgba(4, 4, 51, 1) 0%, rgba(10, 97, 165, 1) 35%,
             rgba(53, 216, 237, 1) 100%);
-    padding: 3% 5%;
+    padding: 3%;
 }
 
 #about {
@@ -85,7 +92,7 @@ nav ul li:hover {
 #about>*,
 #support>*,
 #benefit>*,#latest-events>* {
-    padding-top: 3%;
+    padding-top:6%;
 
 }
 
@@ -137,9 +144,9 @@ nav ul li:hover {
 
 .team-card {
     border-radius: 5%;
-    background-image: radial-gradient(#009ffd 10%, #2a2a72 100%);
+    background-image: linear-gradient(to top, rgb(31, 179, 237) 11.2%, rgb(17, 106, 197) 91.1%);
     margin:10%;
-    padding:2%;
+    padding:1%;
     display: flex;
     flex-direction: column;
     place-items:center;
@@ -147,24 +154,20 @@ nav ul li:hover {
 
 .team-card img {
     border-radius: 50%;
+    height:50%;
+    width:60%;
 
 }
 
 #sm-tab {
-    width: 100%;
-    height: 30%;
+    width:80%;
+    height:10%;
     display: flex;
     justify-content: space-around;
 }
 
 .team-card>* {
-    margin: 2%;
-    padding: 2%;
-}
-
-.team-card:hover {
-    background-image:linear-gradient(#2a2a72 50%,#009ffd 50%);
-
+    padding: 5%;
 }
 .heading{
     min-height:45vh;
@@ -179,16 +182,15 @@ nav ul li:hover {
 #info{
     background: linear-gradient(to right, #000046, #1cb5e0);
     min-height: 50vh;
-    padding:4%;
+    padding:5%;
     color:var(--fwhite);
     font-weight: 300;
 }
 #info>*{
-    margin-top:2%;
+    margin-top:4%;
 }
 #top-bar-council{
     background: linear-gradient(to right, #000046, #1cb5e0);
-    font-size:2vh;
     min-height:5vh;
     padding:2%;
     color:var(--fwhite);
@@ -361,6 +363,10 @@ input[type=number] {
     #home,
     #credits,#info,  .team-page-card{
         font-size:60%;
+    }
+    #home>*{
+        padding-top:10%;
+
     }
     .event-card {
         font-size:45%;
